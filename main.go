@@ -8,6 +8,8 @@ import (
 
 func main () {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("/static/"))))
+	http.Handle("/dist/", http.StripPrefix("/dist/", http.FileServer(http.Dir("dist"))))
+
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		tmpl := template.Must(template.ParseFiles("./templates/index.html"))
