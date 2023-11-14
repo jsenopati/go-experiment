@@ -4,22 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julien Senopati</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="/dist/output.css" rel="stylesheet">
 </head>
 
 <script src="https://unpkg.com/htmx.org@1.9.8"></script>
 
 <body>
-    <main>
-        <div class="flex flex-col items-center justify-center bg-slate-600">
-        
-        <h1 class="flex flex-col text-2xl">Hello!</h1>
-        <div class="flex flex-col items-center justify-center">
+    <main class="flex justify-center items-center font-sans text-gray-300 h-screen bg-zinc-900">
+        <div class="flex flex-col items-center w-5/6">
+            <h1 class="flex text-4xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-300 font-bold">Hello, I'm Julien.</h1>
+            <hr class="bg-gradient-to-r from-blue-500 to-green-500 h-1 w-4/6 my-4">
             <div class="flex flex-col items-center justify-center">
-                <p>I'm Julien. I'm a Sofware Development student at SAIT.</p>
+                <p>I'm a Software Development student at SAIT.</p>            
+                <p>I do web dev for
+                    <span class="hover:border-teal-200 border-2 border-transparent font-bold rounded-md">
+                    <a href="https://treemansion.com/" class="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-300">Treemansion.com</a></span>, an e-commerce platform and community for all things AI art, working primarily with Next.js and TypeScript.</p>
+            <p>This past summer, I did an internship at
+                <span class="hover:border-teal-200 border-2 border-transparent font-bold rounded-md">
+                <a href="https://www.s01ve.io/" class="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-300">s01ve Cyber Solutions</a></span>, a cybersecurity/IT service and consultation company, where I worked on a mobile security app built with Expo and a webapp using Next.js.</p>
+            <p>Right now, my interests are Go, htmx, and Svelte.</p>
             </div>
         </div>
-    </div>
-</main>
+        <div class="flex flex-row"></div>
+        <div class="justify-end">Built using Go, htmx, and Tailwind &lt;3</div>
+    </main>
 </body>
 </html>
