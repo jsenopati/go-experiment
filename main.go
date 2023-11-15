@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func main () {
+func main() {
 	http.Handle("/dist/", http.StripPrefix("/dist/", http.FileServer(http.Dir("dist"))))
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
@@ -14,7 +14,11 @@ func main () {
 		tmpl.Execute(w, nil)
 	})
 
+	http.HandleFunc("/about", func(w http.ResponseWriter, r *http.Request) {
+		tmpl := template.Must(template.ParseFiles("./templates/fragments/about.html"))
+		tmpl.Execute(w, nil)
+	})
+
 	log.Println("App running on port 8000...")
 	log.Fatal(http.ListenAndServe(":8000", nil))
-	
 }
