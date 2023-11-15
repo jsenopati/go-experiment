@@ -591,6 +591,14 @@ video {
   width: 100%;
 }
 
+.w-3\/6 {
+  width: 50%;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -613,6 +621,10 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .rounded-3xl {
@@ -722,6 +734,16 @@ video {
   color: transparent;
 }
 
+.ring-2 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.ring-transparent {
+  --tw-ring-color: transparent;
+}
+
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -750,7 +772,27 @@ video {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.hover\:animate-ping:hover {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.hover\:border-t:hover {
+  border-top-width: 1px;
+}
+
 .hover\:border-teal-200:hover {
   --tw-border-opacity: 1;
   border-color: rgb(153 246 228 / var(--tw-border-opacity));
+}
+
+.hover\:ring-teal-200:hover {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(153 246 228 / var(--tw-ring-opacity));
 }
